@@ -1,0 +1,26 @@
+server:
+  port: 8808
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/db_test?characterEncoding=utf-8
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: qwer1234
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+# 文件编码
+person:
+  age: ${random.int}
+  boss: false
+  birth: 2018/07/17
+  maps: {k1: v1, k2: 12}
+  lists:
+    - lisi
+    - zhaoliu
+  dog:
+    name: ${person.hello:hello}_dog
+    age: 2
+  last-name: 张三${random.uuid}

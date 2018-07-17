@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: dev
+server:
+  port: 8001
+---
+server:
+  port: 8002
+spring:
+  profiles: native
+
+---
+server:
+  port: 8009
+spring:
+  profiles: prod
